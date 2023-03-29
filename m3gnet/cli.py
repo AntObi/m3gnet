@@ -185,7 +185,7 @@ def main():
     )
 
     p_md.add_argument(
-        "--log",
+        "--logfile",
         dest="logfile",
         required=False,
         type=str,
