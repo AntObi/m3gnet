@@ -253,9 +253,18 @@ A simple CLI tool has been written. Right now, it supports just doing structure 
 immediately useful for quick testing of the capabilities of M3GNet itself. More features will be developed in future if
 there is user interest. Examples below.
 
+
 ```bash
 m3g relax --infile Li2O.cif  # Outputs to stdout the relaxed structure.
 m3g relax --infile Li2O.cif --outfile Li2O_relaxed.cif  # Outputs to a file the relaxed structure.
+```
+
+(Update: 29/03/2023) The CLI tool has been updated to support molecular dynamics simulations. See the example below.
+
+```bash
+m3g md --infile Li2O.cif --temp 1000 --ensemble nvt \
+--timestep 2 --nsteps 1000 --traj Li2O.traj --logfile Li2O.log \
+--loginterval 100
 ```
 
 ## Molecular dynamics
